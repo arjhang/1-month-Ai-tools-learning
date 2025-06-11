@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>پورتال دوره جامع هوش مصنوعی</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@400;500;700;800&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Vazirmatn', sans-serif;
+            background-color: #f8fafc; /* slate-50 */
+        }
+        .card {
+            background-color: white;
+            border-radius: 0.75rem;
+            padding: 2rem;
+            text-align: center;
+            box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.05), 0 2px 4px -2px rgb(0 0 0 / 0.05);
+            transition: all 0.3s ease-in-out;
+            border: 1px solid #e2e8f0;
+        }
+        .card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
+        }
+        .card-icon {
+            font-size: 3rem;
+            line-height: 1;
+            margin-bottom: 1rem;
+            color: #0d9488; /* teal-600 */
+        }
+        .card-title {
+            font-size: 1.25rem;
+            font-weight: 700;
+            margin-bottom: 0.5rem;
+            color: #1e293b; /* slate-800 */
+        }
+        .card-description {
+            font-size: 0.875rem;
+            color: #64748b; /* slate-500 */
+            margin-bottom: 1.5rem;
+            min-height: 42px;
+        }
+        .card-link {
+            display: inline-block;
+            background-color: #14b8a6;
+            color: white;
+            padding: 0.5rem 1.5rem;
+            border-radius: 9999px;
+            font-weight: 500;
+            transition: background-color 0.2s;
+        }
+        .card-link:hover {
+            background-color: #0d9488;
+        }
+        .main-card {
+            background: linear-gradient(135deg, #0d9488, #14b8a6);
+            color: white;
+        }
+        .main-card .card-icon,
+        .main-card .card-title,
+        .main-card .card-description {
+            color: white;
+        }
+        .main-card .card-link {
+            background-color: white;
+            color: #0d9488;
+        }
+        .main-card .card-link:hover {
+            background-color: #f0fdfa;
+        }
+
+    </style>
+</head>
+<body class="text-slate-700">
+
+    <!-- Header -->
+    <header class="bg-white shadow-sm sticky top-0 z-50">
+        <nav class="container mx-auto px-6 py-4 flex justify-between items-center">
+            <h1 class="text-xl font-bold text-slate-800">دوره جامع هوش مصنوعی</h1>
+            <div>
+                <a href="index.html" class="bg-teal-600 text-white font-semibold px-4 py-2 rounded-full hover:bg-teal-700 transition-colors duration-300 flex items-center gap-2">
+                    <span>🏠</span>
+                    <span>صفحه اصلی</span>
+                </a>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Main Content -->
+    <main class="container mx-auto px-6 py-12">
+        <div class="text-center mb-12">
+             <h2 class="text-3xl md:text-4xl font-extrabold text-slate-800">پورتال دوره</h2>
+             <p class="mt-3 text-lg text-slate-500 max-w-2xl mx-auto">نقطه شروع شما برای دسترسی به تمام محتوا و منابع دوره.</p>
+        </div>
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            
+            <!-- Main Dashboard Card -->
+            <div class="card main-card md:col-span-2 lg:grid-cols-3">
+                <div class="card-icon">🚀</div>
+                <h2 class="card-title text-2xl">نقشه راه دوره</h2>
+                <p class="card-description">نمای کلی و تعاملی دوره چهار هفته‌ای شما. از اینجا مسیر یادگیری خود را آغاز کنید.</p>
+                <a href="Ai learning in one month.html" class="card-link">شروع یادگیری</a>
+            </div>
+
+            <!-- Week 1 -->
+            <div class="card">
+                <div class="card-icon">🎨</div>
+                <h2 class="card-title">هفته اول</h2>
+                <p class="card-description">آموزش کامل تولید محتوای متنی و تصویری با هوش مصنوعی.</p>
+                <a href="Ai 1 one month zip learnin - week 1.html" class="card-link">مشاهده جزئیات</a>
+            </div>
+            
+            <!-- Week 2 -->
+            <div class="card">
+                <div class="card-icon">⚙️</div>
+                <h2 class="card-title">هفته دوم</h2>
+                <p class="card-description">آموزش قدم به قدم اتوماسیون فرآیندها و ساخت چت‌بات.</p>
+                <a href="Ai 1 one month zip learnin - week 2.html" class="card-link">مشاهده جزئیات</a>
+            </div>
+
+            <!-- Week 3 -->
+            <div class="card">
+                <div class="card-icon">📈</div>
+                <h2 class="card-title">هفته سوم</h2>
+                <p class="card-description">یادگیری بازاریابی و تحلیل داده با ابزارهای هوشمند.</p>
+                <a href="Ai 1 one month zip learnin - week 3.html" class="card-link">مشاهده جزئیات</a>
+            </div>
+
+            <!-- Week 4 -->
+            <div class="card">
+                <div class="card-icon">💼</div>
+                <h2 class="card-title">هفته چهارم</h2>
+                <p class="card-description">ساخت پورتفولیو حرفه‌ای و یادگیری اصول بازاریابی خدمات.</p>
+                <a href="Ai 1 one month zip learnin - week 4.html" class="card-link">مشاهده جزئیات</a>
+            </div>
+
+            <!-- Toolbox Card -->
+            <div class="card md:col-span-2">
+                <div class="card-icon">🛠️</div>
+                <h2 class="card-title">جعبه ابزار دوره</h2>
+                <p class="card-description">لیست کامل و جامع تمام ابزارهای رایگان و پولی مورد نیاز در طول دوره.</p>
+                <a href="Ai toolbox.html" class="card-link">مشاهده ابزارها</a>
+            </div>
+
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-slate-800 text-white mt-16">
+        <div class="container mx-auto px-6 py-10 text-center">
+            <h3 class="text-xl font-bold">دوره جامع هوش مصنوعی کاربردی</h3>
+            <p class="text-slate-400 mt-4">تهیه و تدوین دوره:</p>
+            <p class="text-2xl font-extrabold text-teal-400 mt-2">ا.ق.آبکناری</p>
+            <p class="text-lg text-slate-300 mt-1 tracking-wider">@iDoDatofficial</p>
+        </div>
+    </footer>
+
+</body>
+</html>

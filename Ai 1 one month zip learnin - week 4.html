@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>هفته چهارم: پورتفولیو و بازاریابی خدمات</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@400;500;700;800&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Vazirmatn', sans-serif;
+            scroll-behavior: smooth;
+        }
+        .step-counter {
+            background-color: #0d9488; /* teal-600 */
+            color: white;
+            min-width: 48px;
+            height: 48px;
+            border-radius: 50%;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+            font-size: 1.5rem;
+            border: 3px solid #ccfbf1; /* teal-100 */
+            box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
+        }
+        .tab-button.active {
+            border-color: #0d9488; /* teal-600 */
+            color: #0d9488;
+            font-weight: 700;
+        }
+        .portfolio-card {
+            background-color: white;
+            border-radius: 0.75rem;
+            padding: 1.5rem;
+            box-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
+            transition: all 0.3s ease-in-out;
+        }
+        .portfolio-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 20px 25px -5px rgb(0 0 0 / 0.1), 0 8px 10px -6px rgb(0 0 0 / 0.1);
+        }
+    </style>
+</head>
+<body class="bg-slate-100 text-slate-800">
+<!-- START: NAVIGATION HEADER -->
+<header class="bg-white shadow-sm sticky top-0 z-50">
+    <nav class="container mx-auto px-6 py-4 flex justify-between items-center">
+        <!-- عنوان صفحه به صورت خودکار از تگ <title> خوانده می‌شود -->
+        <h1 id="page-title" class="text-xl font-bold text-slate-800"></h1>
+        <div>
+            <a href="index.html" class="bg-teal-100 text-teal-800 font-semibold px-4 py-2 rounded-full hover:bg-teal-200 transition-colors duration-300 flex items-center gap-2">
+                <span>↪</span>
+                <span>بازگشت به پورتال</span>
+            </a>
+        </div>
+    </nav>
+</header>
+<!-- END: NAVIGATION HEADER -->
+
+    <!-- Header -->
+    <header class="bg-white shadow-lg">
+        <div class="container mx-auto px-6 py-6 text-center">
+            <h1 class="text-3xl md:text-4xl font-extrabold text-teal-700">هفته چهارم: از مهارت به درآمد</h1>
+            <p class="mt-3 text-lg text-slate-600 max-w-3xl mx-auto">این هفته، آموخته‌های خود را به دارایی‌های ارزشمند تبدیل می‌کنیم. شما یاد می‌گیرید که چگونه توانایی‌های خود را به نمایش بگذارید و اولین مشتریان خود را پیدا کنید.</p>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="container mx-auto px-6 py-12">
+
+        <!-- Tab Navigation -->
+        <div class="mb-10 flex justify-center border-b border-slate-300">
+            <button id="portfolio-tab-button" class="tab-button text-lg font-semibold px-6 py-3 -mb-px border-b-4">بخش اول: ساخت پورتفولیوی حرفه‌ای</button>
+            <button id="marketing-tab-button" class="tab-button text-lg font-semibold px-6 py-3 border-b-4 border-transparent text-slate-500 hover:text-teal-600">بخش دوم: بازاریابی و جذب پروژه</button>
+        </div>
+
+        <!-- Portfolio Content -->
+        <div id="portfolio-content">
+            <section class="mb-12 text-center">
+                <h2 class="text-2xl font-bold mb-4">پورتفولیو: مدرک شما برای اثبات توانایی</h2>
+                <p class="text-slate-600 leading-relaxed max-w-4xl mx-auto">
+                    در دنیای فریلنسینگ، مدرک دانشگاهی شما اهمیت چندانی ندارد؛ <strong class="text-teal-600">نمونه کارهای شما</strong> حرف اول را می‌زنند. پورتفولیو به کارفرما نشان می‌دهد که شما فقط دانش تئوری ندارید، بلکه می‌توانید مسائل واقعی را حل کرده و ارزش‌آفرینی کنید. یک پورتفولیوی قوی، بهترین ابزار بازاریابی شماست.
+                </p>
+            </section>
+
+            <section class="mb-12">
+                <h2 class="text-2xl font-bold mb-8 text-center">گردش کار ساخت پورتفولیوی تأثیرگذار</h2>
+
+                <!-- Step 1 -->
+                <div class="flex items-start mb-10">
+                    <div class="step-counter ml-6 flex-shrink-0">۱</div>
+                    <div>
+                        <h3 class="text-xl font-bold mb-2">تعیین حوزه تخصصی (Niche)</h3>
+                        <p class="text-slate-600">از خودتان بپرسید کدام بخش از سه هفته گذشته برایتان جذاب‌تر بود؟ آیا از خلق محتوا لذت بردید؟ یا از نظم بخشیدن به فرآیندها با اتوماسیون؟ یا از کشف داستان‌ها در دل داده‌ها؟ روی یک یا دو حوزه تمرکز کنید. یک "متخصص همه‌کاره" بودن، جذابیت کمتری نسبت به یک "متخصص تولید محتوای هوشمند" دارد.</p>
+                    </div>
+                </div>
+
+                <!-- Step 2 -->
+                <div class="flex items-start mb-10">
+                    <div class="step-counter ml-6 flex-shrink-0">۲</div>
+                    <div>
+                        <h3 class="text-xl font-bold mb-2">طراحی پروژه‌های فرضی اما واقعی</h3>
+                        <p class="text-slate-600">لازم نیست منتظر مشتری واقعی بمانید. برای خودتان یک پروژه تعریف کنید. یک برند یا کسب‌وکار فرضی (مثلاً یک استارتاپ گردشگری پایدار) را در نظر بگیرید و برای آن یک چالش تعریف کنید. مثلاً: "افزایش تعامل در صفحه اینستاگرام این استارتاپ از طریق محتوای تولید شده با AI".</p>
+                    </div>
+                </div>
+                
+                <!-- Step 3 -->
+                <div class="flex items-start mb-10">
+                    <div class="step-counter ml-6 flex-shrink-0">۳</div>
+                    <div>
+                        <h3 class="text-xl font-bold mb-2">اجرا و مستندسازی فرآیند</h3>
+                        <p class="text-slate-600">پروژه را با استفاده از مهارت‌هایی که یاد گرفته‌اید، اجرا کنید. نکته کلیدی در این مرحله، <strong class="text-teal-600">مستندسازی فرآیند</strong> است. فقط خروجی نهایی را نشان ندهید؛ توضیح دهید که <strong class="text-black">چرا</strong> این راه حل را انتخاب کردید. چه پرامپت‌هایی نوشتید؟ چه چالش‌هایی داشتید و چگونه آن‌ها را حل کردید؟ این نشان‌دهنده تفکر استراتژیک شماست.</p>
+                    </div>
+                </div>
+            </section>
+
+            <section class="mb-12">
+                <h2 class="text-2xl font-bold mb-8 text-center">نمونه پروژه‌های الهام‌بخش برای پورتفولیو</h2>
+                <div class="grid md:grid-cols-1 lg:grid-cols-3 gap-8">
+                    <!-- Project 1 -->
+                    <div class="portfolio-card">
+                        <div class="text-center mb-4"><span class="text-5xl">🎨</span></div>
+                        <h3 class="font-bold text-xl mb-3 text-center">پروژه: استراتژیست محتوای هوشمند</h3>
+                        <p class="text-sm text-slate-600 mb-4"><strong>شرح پروژه:</strong> طراحی و اجرای یک کمپین محتوایی یک ماهه برای برند فرضی "کافه کتاب آنلاین" با هدف افزایش آگاهی از برند.</p>
+                        <strong class="text-sm">خروجی‌ها:</strong>
+                        <ul class="list-disc list-inside mt-2 text-sm space-y-1">
+                            <li>۱۰ نمونه پست اینستاگرام (تصویر + کپشن) با پرامپت‌های دقیق.</li>
+                            <li>یک نمونه مقاله وبلاگ بهینه‌شده برای سئو.</li>
+                            <li>یک سناریوی ویدیوی کوتاه تبلیغاتی.</li>
+                        </ul>
+                    </div>
+                    <!-- Project 2 -->
+                    <div class="portfolio-card">
+                        <div class="text-center mb-4"><span class="text-5xl">⚙️</span></div>
+                        <h3 class="font-bold text-xl mb-3 text-center">پروژه: متخصص اتوماسیون</h3>
+                        <p class="text-sm text-slate-600 mb-4"><strong>شرح پروژه:</strong> بهینه‌سازی فرآیند ثبت‌نام در یک وبینار آموزشی فرضی برای کاهش کارهای دستی.</p>
+                        <strong class="text-sm">خروجی‌ها:</strong>
+                        <ul class="list-disc list-inside mt-2 text-sm space-y-1">
+                            <li>طراحی چت‌بات پاسخ به سوالات متداول وبینار.</li>
+                            <li>ساخت یک گردش کار (Zap) که ثبت‌نام‌کنندگان را به لیست ایمیل اضافه کرده و برایشان ایمیل تاییدیه ارسال می‌کند.</li>
+                        </ul>
+                    </div>
+                    <!-- Project 3 -->
+                    <div class="portfolio-card">
+                        <div class="text-center mb-4"><span class="text-5xl">📊</span></div>
+                        <h3 class="font-bold text-xl mb-3 text-center">پروژه: تحلیلگر داده کسب‌وکار</h3>
+                        <p class="text-sm text-slate-600 mb-4"><strong>شرح پروژه:</strong> تحلیل داده‌های فروش یک فروشگاه آنلاین فرضی برای شناسایی نقاط قابل بهبود.</p>
+                        <strong class="text-sm">خروجی‌ها:</strong>
+                        <ul class="list-disc list-inside mt-2 text-sm space-y-1">
+                            <li>یک داشبورد مدیریتی تک صفحه‌ای در Power BI.</li>
+                            <li>ارائه یک گزارش کوتاه (یک صفحه‌ای) شامل ۳ یافته کلیدی از داده‌ها و پیشنهادهای عملی برای افزایش فروش.</li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+        </div>
+
+        <!-- Marketing Content -->
+        <div id="marketing-content" class="hidden">
+            <section class="mb-12 text-center">
+                <h2 class="text-2xl font-bold mb-4">اگر دیده نشوید، وجود ندارید!</h2>
+                <p class="text-slate-600 leading-relaxed max-w-4xl mx-auto">
+                    بهترین متخصصان هم اگر نتوانند توانایی‌های خود را به درستی بازاریابی کنند، بیکار می‌مانند. در این بخش، یاد می‌گیرید چگونه برای خود یک برند شخصی حرفه‌ای بسازید، پورتفولیوی خود را به نمایش بگذارید و به طور موثر به دنبال پروژه بگردید.
+                </p>
+            </section>
+
+             <section class="mb-12">
+                <h2 class="text-2xl font-bold mb-8 text-center">مراحل ورود به بازار کار فریلنسری</h2>
+
+                <!-- Step 1 -->
+                <div class="flex items-start mb-10">
+                    <div class="step-counter ml-6 flex-shrink-0">۱</div>
+                    <div>
+                        <h3 class="text-xl font-bold mb-2">بهینه‌سازی پروفایل لینکدین</h3>
+                        <p class="text-slate-600">لینکدین کارت ویزیت آنلاین شماست. پروفایل خود را به گونه‌ای بهینه‌سازی کنید که کارفرما را جذب کند.</p>
+                        <div class="mt-4 p-4 bg-white rounded-lg shadow">
+                            <h4 class="font-bold text-lg mb-2">مثال بهینه‌سازی تیتر لینکدین:</h4>
+                            <p class="mb-2"><strong class="text-red-600">❌ ضعیف:</strong> فریلنسر</p>
+                            <p><strong class="text-green-600">✅ قوی:</strong> متخصص تولید محتوا و اتوماسیون با هوش مصنوعی | کمک به کسب‌وکارها برای رشد سریع‌تر</p>
+                            <p class="text-sm text-slate-500 mt-2">تیتر قوی، هم تخصص شما را نشان می‌دهد و هم ارزشی که به مشتری ارائه می‌دهید.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Step 2 -->
+                <div class="flex items-start mb-10">
+                    <div class="step-counter ml-6 flex-shrink-0">۲</div>
+                    <div>
+                        <h3 class="text-xl font-bold mb-2">ارائه حرفه‌ای نمونه کارها</h3>
+                        <p class="text-slate-600">نمونه کارهای خود را در یک قالب قابل ارائه آماده کنید. بهترین گزینه‌ها:</p>
+                        <ul class="list-disc list-inside mt-3 space-y-2 text-slate-700">
+                            <li><strong>یک فایل PDF شیک:</strong> ساده‌ترین راه برای شروع.</li>
+                            <li><strong>یک وب‌سایت تک صفحه‌ای:</strong> با ابزارهایی مانند Carrd یا Tilda می‌توانید به سرعت یک سایت حرفه‌ای بسازید.</li>
+                            <li><strong>بخش Featured در لینکدین:</strong> نمونه کارهای خود را مستقیماً در پروفایل لینکدین خود به نمایش بگذارید.</li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <!-- Step 3 -->
+                <div class="flex items-start mb-10">
+                    <div class="step-counter ml-6 flex-shrink-0">۳</div>
+                    <div>
+                        <h3 class="text-xl font-bold mb-2">فعالیت در پلتفرم‌های فریلنسری</h3>
+                        <p class="text-slate-600">در پلتفرم‌های فریلنسری ثبت‌نام کرده و پروفایل خود را با دقت کامل کنید. در ابتدا برای پروژه‌های کوچک‌تر با قیمت‌های مناسب‌تر پیشنهاد ارسال کنید تا امتیاز و تجربه کسب کنید.</p>
+                         <div class="mt-4 grid grid-cols-1 md:grid-cols-2 gap-4">
+                            <div class="p-4 bg-white rounded-lg shadow">
+                                <h4 class="font-bold text-center">🇮🇷 پلتفرم‌های ایرانی</h4>
+                                <ul class="list-inside text-center mt-2">
+                                    <li>پونیشا (Ponisha)</li>
+                                    <li>انجام میدم (AnjamMidam)</li>
+                                </ul>
+                            </div>
+                            <div class="p-4 bg-white rounded-lg shadow">
+                                <h4 class="font-bold text-center">🌍 پلتفرم‌های بین‌المللی</h4>
+                                <ul class="list-inside text-center mt-2">
+                                    <li>آپ‌ورک (Upwork)</li>
+                                    <li>فایور (Fiverr)</li>
+                                </ul>
+                            </div>
+                         </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+
+        <!-- Final words -->
+        <section class="my-16 bg-teal-600 text-white p-8 rounded-2xl shadow-2xl text-center">
+            <h2 class="text-3xl font-extrabold mb-4">شما به پایان دوره رسیدید، اما این تازه شروع ماجراست!</h2>
+            <p class="text-teal-100 mb-6 max-w-2xl mx-auto">شما در یک ماه، مهارت‌هایی را کسب کرده‌اید که بسیاری از کسب‌وکارها به شدت به دنبال آن هستند. اعتماد به نفس داشته باشید، نمونه کارهای خود را بسازید و اولین قدم را برای ورود به این دنیای هیجان‌انگیز بردارید. آینده از آن شماست.</p>
+            <a href="https://www.linkedin.com/feed/" target="_blank" class="bg-white text-teal-700 font-bold py-3 px-8 rounded-lg hover:bg-teal-100 transition-colors">پروفایل لینکدین خود را به‌روز کنید</a>
+        </section>
+
+    </main>
+    
+    <footer class="bg-slate-800 text-white mt-16">
+        <div class="container mx-auto px-6 py-8 text-center">
+            <p>سفر شما به دنیای هوش مصنوعی آغاز شد. موفق باشید!</p>
+            <p class="text-sm text-slate-400 mt-2">© ۱۴۰۳ - دوره جامع هوش مصنوعی کاربردی</p>
+        </div>
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const portfolioTabButton = document.getElementById('portfolio-tab-button');
+            const marketingTabButton = document.getElementById('marketing-tab-button');
+            const portfolioContent = document.getElementById('portfolio-content');
+            const marketingContent = document.getElementById('marketing-content');
+
+            function showPortfolioContent() {
+                portfolioContent.classList.remove('hidden');
+                marketingContent.classList.add('hidden');
+                portfolioTabButton.classList.add('active');
+                marketingTabButton.classList.remove('active', 'text-teal-600');
+                marketingTabButton.classList.add('border-transparent', 'text-slate-500');
+            }
+
+            function showMarketingContent() {
+                marketingContent.classList.remove('hidden');
+                portfolioContent.classList.add('hidden');
+                marketingTabButton.classList.add('active');
+                portfolioTabButton.classList.remove('active');
+                portfolioTabButton.classList.add('border-transparent', 'text-slate-500');
+            }
+
+            portfolioTabButton.addEventListener('click', showPortfolioContent);
+            marketingTabButton.addEventListener('click', showMarketingContent);
+
+            // Initially show portfolio content
+            showPortfolioContent();
+        });
+    </script>
+
+     <!-- Footer -->
+    <footer class="bg-slate-800 text-white mt-16">
+        <div class="container mx-auto px-6 py-10 text-center">
+            <h3 class="text-xl font-bold">دوره جامع هوش مصنوعی کاربردی</h3>
+            <p class="text-slate-400 mt-4">تهیه و تدوین دوره:</p>
+            <p class="text-2xl font-extrabold text-teal-400 mt-2">ا.ق.آبکناری</p>
+            <p class="text-lg text-slate-300 mt-1 tracking-wider">@iDoDatofficial</p>
+        </div>
+    </footer>
+
+    <!-- این اسکریپت کوچک را به انتهای تگ <body> اضافه کنید -->
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        const pageTitleElement = document.getElementById('page-title');
+        if (pageTitleElement) {
+            pageTitleElement.textContent = document.title;
+        }
+    });
+</script>
+</body>
+</html>

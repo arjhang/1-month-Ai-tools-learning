@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>هفته دوم: اتوماسیون و ساخت چت‌بات</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@400;500;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Vazirmatn', sans-serif;
+            scroll-behavior: smooth;
+        }
+        .step-counter {
+            background-color: #0d9488; /* teal-600 */
+            color: white;
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+            font-size: 1.25rem;
+        }
+        .tab-button.active {
+            border-color: #0d9488; /* teal-600 */
+            color: #0d9488;
+        }
+        .flow-box {
+            background-color: #f1f5f9; /* slate-100 */
+            border-right: 4px solid #3b82f6; /* blue-500 */
+            padding: 1rem;
+            border-radius: 0.75rem;
+            margin-bottom: 1rem;
+            position: relative;
+        }
+        .flow-box.user {
+             border-right: 4px solid #64748b; /* slate-500 */
+        }
+        .flow-arrow {
+            position: absolute;
+            right: 50%;
+            bottom: -25px;
+            transform: translateX(50%);
+            font-size: 2rem;
+            color: #94a3b8; /* slate-400 */
+        }
+    </style>
+</head>
+<body class="bg-slate-50 text-slate-800">
+<!-- START: NAVIGATION HEADER -->
+<header class="bg-white shadow-sm sticky top-0 z-50">
+    <nav class="container mx-auto px-6 py-4 flex justify-between items-center">
+        <!-- عنوان صفحه به صورت خودکار از تگ <title> خوانده می‌شود -->
+        <h1 id="page-title" class="text-xl font-bold text-slate-800"></h1>
+        <div>
+            <a href="index.html" class="bg-teal-100 text-teal-800 font-semibold px-4 py-2 rounded-full hover:bg-teal-200 transition-colors duration-300 flex items-center gap-2">
+                <span>↪</span>
+                <span>بازگشت به پورتال</span>
+            </a>
+        </div>
+    </nav>
+</header>
+
+    <!-- Header -->
+    <header class="bg-white shadow-md">
+        <div class="container mx-auto px-6 py-5 text-center">
+            <h1 class="text-3xl md:text-4xl font-bold text-teal-700">هفته دوم: اتوماسیون و ساخت چت‌بات</h1>
+            <p class="mt-2 text-lg text-slate-600">در این هفته، می‌آموزید چگونه فرآیندهای تکراری را خودکار کرده و پشتیبانی مشتریان را با چت‌بات‌های هوشمند متحول کنید.</p>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="container mx-auto px-6 py-10">
+
+        <!-- Tab Navigation -->
+        <div class="mb-8 flex justify-center border-b border-slate-300">
+            <button id="chatbot-tab-button" class="tab-button text-lg font-semibold px-6 py-3 -mb-px border-b-4">بخش اول: ساخت چت‌بات‌های هوشمند</button>
+            <button id="automation-tab-button" class="tab-button text-lg font-semibold px-6 py-3 border-b-4 border-transparent text-slate-500 hover:text-teal-600">بخش دوم: اتوماسیون فرآیندها</button>
+        </div>
+
+        <!-- Chatbot Content -->
+        <div id="chatbot-content">
+            <section class="mb-12">
+                <h2 class="text-2xl font-bold mb-4">چرا کسب‌وکارها به چت‌بات نیاز دارند؟</h2>
+                <p class="text-slate-600 leading-relaxed">
+                    چت‌بات‌ها دستیارهای مجازی هستند که می‌توانند ۲۴ ساعته به سوالات متداول مشتریان پاسخ دهند، اطلاعات آن‌ها را جمع‌آوری کنند و آن‌ها را در فرآیند خرید یا رزرو راهنمایی کنند. استفاده از چت‌بات‌ها باعث صرفه‌جویی در زمان، کاهش هزینه‌ها و افزایش رضایت مشتریان می‌شود. در این بخش، یاد می‌گیرید چگونه بدون یک خط کدنویسی، چت‌بات‌های هوشمند بسازید.
+                </p>
+            </section>
+
+            <section class="mb-12">
+                <h2 class="text-2xl font-bold mb-6 text-center">آموزش قدم به قدم ساخت چت‌بات حرفه‌ای</h2>
+
+                <!-- Step 1 -->
+                <div class="flex items-start mb-8">
+                    <div class="step-counter ml-4 flex-shrink-0">۱</div>
+                    <div>
+                        <h3 class="text-xl font-bold mb-2">هدف‌گذاری و تعیین استراتژی</h3>
+                        <p class="text-slate-600">پیش از هر کاری، به این سوالات پاسخ دهید: هدف اصلی چت‌بات چیست؟ (مثلاً افزایش فروش، کاهش تماس‌های پشتیبانی، جمع‌آوری لید). شاخص کلیدی عملکرد (KPI) برای سنجش موفقیت آن چیست؟ (مثلاً تعداد رزروهای موفق، درصد پاسخ به سوالات متداول). این استراتژی، راهنمای شما در تمام مراحل خواهد بود.</p>
+                    </div>
+                </div>
+
+                <!-- Step 2 -->
+                <div class="flex items-start mb-8">
+                    <div class="step-counter ml-4 flex-shrink-0">۲</div>
+                    <div>
+                        <h3 class="text-xl font-bold mb-2">طراحی شخصیت و مسیر مکالمه</h3>
+                        <p class="text-slate-600">برای چت‌بات خود یک شخصیت (Personality) تعریف کنید. آیا قرار است شوخ و دوستانه باشد یا رسمی و حرفه‌ای؟ سپس، یک نقشه دقیق از تمام مسیرهای مکالمه (Conversation Flow) ترسیم کنید. این نقشه باید شامل تمام انشعاب‌ها، مدیریت خطا (مثلاً اگر کاربر پاسخ نامعتبر داد) و پیام‌های خوشامدگویی و خداحافظی باشد.</p>
+                    </div>
+                </div>
+                
+                <!-- Step 3 -->
+                <div class="flex items-start mb-8">
+                    <div class="step-counter ml-4 flex-shrink-0">۳</div>
+                    <div>
+                        <h3 class="text-xl font-bold mb-2">انتخاب پلتفرم و ابزار مناسب</h3>
+                        <p class="text-slate-600">بر اساس پیچیدگی و کانال ارتباطی (وب‌سایت، اینستاگرام، واتس‌اپ)، پلتفرم خود را انتخاب کنید. <strong class="text-teal-600">ManyChat</strong> برای شبکه‌های اجتماعی، <strong class="text-teal-600">Tars</strong> برای وب‌سایت، و پلتفرم‌های پیشرفته‌تر مانند <strong class="text-teal-600">Dialogflow</strong> (از گوگل) برای نیازهای پیچیده‌تر مناسب هستند.</p>
+                    </div>
+                </div>
+
+                <!-- Step 4 -->
+                <div class="flex items-start mb-8">
+                    <div class="step-counter ml-4 flex-shrink-0">۴</div>
+                    <div>
+                        <h3 class="text-xl font-bold mb-2">پیاده‌سازی، تست و بهینه‌سازی مداوم</h3>
+                        <p class="text-slate-600">با استفاده از ابزار بصری پلتفرم، مسیر مکالمه را پیاده‌سازی کنید. از دکمه‌ها، پاسخ‌های سریع و عناصر بصری برای بهبود تجربه کاربری استفاده کنید. پس از ساخت، چت‌بات را با سناریوهای مختلف تست کنید. فرآیند ساخت چت‌بات یک پروژه تمام‌شدنی نیست؛ باید به طور مداوم عملکرد آن را تحلیل کرده و بر اساس بازخورد کاربران، آن را بهینه کنید.</p>
+                    </div>
+                </div>
+            </section>
+
+            <section class="mb-12 bg-white p-8 rounded-2xl shadow-lg">
+                <h2 class="text-2xl font-bold mb-6 text-center">مثال عملی: طراحی چت‌بات حرفه‌ای رزرو میز برای رستوران</h2>
+                <p class="text-center text-slate-600 mb-6">در این مثال، یک مسیر مکالمه کامل و حرفه‌ای برای رزرو میز را طراحی می‌کنیم که شامل اعتبارسنجی و تایید نهایی است.</p>
+                
+                <div class="max-w-md mx-auto">
+                    <div class="flow-box">
+                        <p><strong>🤖 چت‌بات:</strong> سلام! به رستوران "طعم اصیل" خوش آمدید. باعث افتخار ماست که میزبان شما باشیم.</p>
+                        <div class="mt-2 flex gap-2">
+                           <button class="bg-blue-200 text-blue-800 text-sm font-medium px-3 py-1 rounded-full hover:bg-blue-300">رزرو میز 📅</button>
+                           <button class="bg-gray-200 text-gray-800 text-sm font-medium px-3 py-1 rounded-full hover:bg-gray-300">مشاهده منو 📖</button>
+                        </div>
+                        <div class="flow-arrow">👇</div>
+                    </div>
+                     <div class="flow-box user">
+                        <p><strong>👤 کاربر:</strong> رزرو میز 📅</p>
+                        <div class="flow-arrow">👇</div>
+                    </div>
+                    <div class="flow-box">
+                        <p><strong>� چت‌بات:</strong> عالی! لطفاً تاریخ مورد نظر خود را انتخاب کنید.</p>
+                        <!-- Here, a date picker UI would be shown -->
+                        <div class="flow-arrow">👇</div>
+                    </div>
+                    <div class="flow-box">
+                        <p><strong>🤖 چت‌بات:</strong> بسیار خب. برای چه ساعتی میز را برایتان رزرو کنیم؟</p>
+                        <div class="flow-arrow">👇</div>
+                    </div>
+                    <div class="flow-box user">
+                        <p><strong>👤 کاربر:</strong> ساعت ۸ شب</p>
+                        <div class="flow-arrow">👇</div>
+                    </div>
+                    <div class="flow-box">
+                        <p><strong>🤖 چت‌بات:</strong> رزرو برای چند نفر است؟</p>
+                        <div class="flow-arrow">👇</div>
+                    </div>
+                    <div class="flow-box user">
+                        <p><strong>👤 کاربر:</strong> ۴ نفر</p>
+                        <div class="flow-arrow">👇</div>
+                    </div>
+                    <div class="flow-box">
+                        <p><strong>🤖 چت‌بات:</strong> عالی! لطفاً نام و شماره تماس خود را برای نهایی کردن رزرو وارد کنید.</p>
+                        <div class="flow-arrow">👇</div>
+                    </div>
+                    <div class="flow-box user">
+                        <p><strong>👤 کاربر:</strong> علی رضایی - ۰۹۱۲۳۴۵۶۷۸۹</p>
+                        <div class="flow-arrow">👇</div>
+                    </div>
+                    <div class="flow-box border-green-500">
+                        <p><strong>🤖 چت‌بات:</strong> متشکرم! رزرو شما نهایی شد. <br> <strong>جزئیات:</strong> میز ۴ نفره برای آقای علی رضایی، در تاریخ [تاریخ انتخابی]، ساعت ۸ شب. <br> منتظر حضور گرمتان هستیم!</p>
+                    </div>
+                </div>
+                 <p class="text-center text-slate-600 mt-8">این مسیر کامل را می‌توان به راحتی در ابزارهایی مانند ManyChat پیاده‌سازی و حتی به سیستم رزرواسیون رستوران متصل کرد.</p>
+            </section>
+        </div>
+
+        <!-- Automation Content -->
+        <div id="automation-content" class="hidden">
+            <section class="mb-12">
+                <h2 class="text-2xl font-bold mb-4">اتوماسیون چیست و چرا اهمیت دارد؟</h2>
+                <p class="text-slate-600 leading-relaxed">
+                    اتوماسیون فرآیندهای کاری به معنای اتصال اپلیکیشن‌ها و سرویس‌های مختلف به یکدیگر است تا وظایف تکراری و دستی به صورت خودکار انجام شوند. با ابزارهایی مانند <strong class="text-teal-600">Zapier</strong> و <strong class="text-teal-600">Make</strong>، می‌توانید بدون نیاز به کدنویسی، گردش‌کارهای قدرتمندی بسازید که باعث صرفه‌جویی شگفت‌انگیزی در زمان و افزایش بهره‌وری تیم شما می‌شود.
+                </p>
+            </section>
+
+             <section class="mb-12">
+                <h2 class="text-2xl font-bold mb-6 text-center">مفاهیم اصلی و آموزش ساخت یک اتوماسیون (Zap)</h2>
+
+                <!-- Step 1 -->
+                <div class="flex items-start mb-8">
+                    <div class="step-counter ml-4 flex-shrink-0">۱</div>
+                    <div>
+                        <h3 class="text-xl font-bold mb-2">مفهوم Trigger (ماشه)</h3>
+                        <p class="text-slate-600">Trigger، رویدادی است که گردش کار شما را آغاز می‌کند. برای مثال: "دریافت یک ایمیل جدید" یا "ثبت یک فرم جدید در سایت".</p>
+                    </div>
+                </div>
+
+                <!-- Step 2 -->
+                <div class="flex items-start mb-8">
+                    <div class="step-counter ml-4 flex-shrink-0">۲</div>
+                    <div>
+                        <h3 class="text-xl font-bold mb-2">مفهوم Action (عمل)</h3>
+                        <p class="text-slate-600">Action، کاری است که پس از فعال شدن Trigger انجام می‌شود. برای مثال: "اضافه کردن یک ردیف به گوگل شیت" یا "ارسال یک پیام در اسلک". یک Trigger می‌تواند چندین Action را فعال کند.</p>
+                    </div>
+                </div>
+            </section>
+
+            <section class="mb-12 bg-white p-8 rounded-2xl shadow-lg">
+                <h2 class="text-2xl font-bold mb-6 text-center">مثال عملی: خودکارسازی فرآیند جمع‌آوری لید</h2>
+                <p class="text-center text-slate-600 mb-6">تصور کنید فرمی در سایت خود برای دریافت اطلاعات مشتریان بالقوه (لید) دارید. می‌خواهیم فرآیند پس از آن را خودکار کنیم.</p>
+
+                <div class="max-w-2xl mx-auto">
+                    <div class="flow-box border-red-500">
+                        <p class="font-bold">۱. ماشه (Trigger)</p>
+                        <p><strong>رویداد:</strong> یک کاربر جدید فرم "تماس با ما" را در سایت پر می‌کند.</p>
+                        <p class="mt-2 text-sm"><strong>اپلیکیشن:</strong> Google Forms / Gravity Forms</p>
+                        <div class="flow-arrow">👇</div>
+                    </div>
+                    <div class="flow-box">
+                        <p class="font-bold">۲. عمل اول (Action 1)</p>
+                        <p><strong>وظیفه:</strong> اطلاعات کاربر (نام، ایمیل، تلفن) را در یک ردیف جدید در فایل Google Sheets ذخیره کن.</p>
+                         <p class="mt-2 text-sm"><strong>اپلیکیشن:</strong> Google Sheets</p>
+                        <div class="flow-arrow">👇</div>
+                    </div>
+                    <div class="flow-box">
+                         <p class="font-bold">۳. عمل دوم (Action 2)</p>
+                        <p><strong>وظیفه:</strong> یک ایمیل تشکر و تاییدیه به صورت خودکار برای کاربر ارسال کن.</p>
+                        <p class="mt-2 text-sm"><strong>اپلیکیشن:</strong> Gmail</p>
+                        <div class="flow-arrow">👇</div>
+                    </div>
+                     <div class="flow-box">
+                         <p class="font-bold">۴. عمل سوم (Action 3)</p>
+                        <p><strong>وظیفه:</strong> یک وظیفه جدید برای تیم فروش ایجاد کن تا با این لید تماس بگیرند.</p>
+                        <p class="mt-2 text-sm"><strong>اپلیکیشن:</strong> Trello / Asana</p>
+                    </div>
+                </div>
+                 <p class="text-center text-slate-600 mt-8">این گردش کار (Zap) به سادگی در Zapier قابل پیاده‌سازی است و تیم شما را از انجام کارهای تکراری بی‌نیاز می‌کند.</p>
+            </section>
+        </div>
+
+        <!-- Weekly Assignment -->
+        <section class="my-16 bg-teal-50 border-r-4 border-teal-500 p-8 rounded-lg">
+            <h2 class="text-2xl font-bold mb-4">🚀 تکلیف این هفته</h2>
+            <p class="text-slate-700 mb-4">حالا نوبت شماست! برای تمرین مهارت‌های این هفته، تسک‌های زیر را انجام دهید:</p>
+            <ol class="list-decimal list-inside text-slate-700 space-y-2">
+                <li><strong>ساخت یک چت‌بات ساده:</strong> با استفاده از ManyChat یا پلتفرم دلخواه، یک چت‌بات ساده برای یک کسب‌وکار فرضی (مثلاً یک آرایشگاه) طراحی کنید که بتواند وقت رزرو کند.</li>
+                <li><strong>طراحی یک گردش کار اتوماسیون:</strong> یک فرآیند تکراری در زندگی شخصی یا کاری خود پیدا کنید و با استفاده از Zapier (نسخه رایگان) یک Zap برای خودکار کردن آن بسازید. (مثلاً: ذخیره پیوست‌های ایمیل در گوگل درایو)</li>
+            </ol>
+            <p class="mt-4 font-semibold">این تمرین‌ها به شما کمک می‌کند تا قدرت واقعی اتوماسیون را درک کرده و برای ارائه این خدمات به دیگران آماده شوید.</p>
+        </section>
+
+    </main>
+    
+    <footer class="bg-slate-800 text-white mt-16">
+        <div class="container mx-auto px-6 py-8 text-center">
+            <p>ادامه مسیر در هفته سوم: بازاریابی و تحلیل داده با هوش مصنوعی</p>
+            <p class="text-sm text-slate-400 mt-2">© ۱۴۰۳ - دوره جامع هوش مصنوعی کاربردی</p>
+        </div>
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const chatbotTabButton = document.getElementById('chatbot-tab-button');
+            const automationTabButton = document.getElementById('automation-tab-button');
+            const chatbotContent = document.getElementById('chatbot-content');
+            const automationContent = document.getElementById('automation-content');
+
+            function showChatbotContent() {
+                chatbotContent.classList.remove('hidden');
+                automationContent.classList.add('hidden');
+                chatbotTabButton.classList.add('active');
+                automationTabButton.classList.remove('active', 'text-teal-600');
+                automationTabButton.classList.add('border-transparent', 'text-slate-500');
+            }
+
+            function showAutomationContent() {
+                automationContent.classList.remove('hidden');
+                chatbotContent.classList.add('hidden');
+                automationTabButton.classList.add('active');
+                chatbotTabButton.classList.remove('active');
+                chatbotTabButton.classList.add('border-transparent', 'text-slate-500');
+            }
+
+            chatbotTabButton.addEventListener('click', showChatbotContent);
+            automationTabButton.addEventListener('click', showAutomationContent);
+
+            // Initially show chatbot content
+            showChatbotContent();
+        });
+    </script>
+
+     <!-- Footer -->
+    <footer class="bg-slate-800 text-white mt-16">
+        <div class="container mx-auto px-6 py-10 text-center">
+            <h3 class="text-xl font-bold">دوره جامع هوش مصنوعی کاربردی</h3>
+            <p class="text-slate-400 mt-4">تهیه و تدوین دوره:</p>
+            <p class="text-2xl font-extrabold text-teal-400 mt-2">ا.ق.آبکناری</p>
+            <p class="text-lg text-slate-300 mt-1 tracking-wider">@iDoDatofficial</p>
+        </div>
+    </footer>
+<!-- این اسکریپت کوچک را به انتهای تگ <body> اضافه کنید -->
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        const pageTitleElement = document.getElementById('page-title');
+        if (pageTitleElement) {
+            pageTitleElement.textContent = document.title;
+        }
+    });
+</script>
+</body>
+</html>

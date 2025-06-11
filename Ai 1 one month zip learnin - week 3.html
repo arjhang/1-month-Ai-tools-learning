@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>هفته سوم: بازاریابی و تحلیل داده با AI</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@400;500;700;800&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Vazirmatn', sans-serif;
+            scroll-behavior: smooth;
+        }
+        .step-counter {
+            background-color: #0d9488; /* teal-600 */
+            color: white;
+            min-width: 48px;
+            height: 48px;
+            border-radius: 50%;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+            font-size: 1.5rem;
+            border: 3px solid #ccfbf1; /* teal-100 */
+            box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
+        }
+        .tab-button.active {
+            border-color: #0d9488; /* teal-600 */
+            color: #0d9488;
+            font-weight: 700;
+        }
+        .diagram-box {
+            background-color: #f8fafc; /* slate-50 */
+            border: 1px solid #e2e8f0; /* slate-200 */
+            padding: 1.5rem;
+            border-radius: 0.75rem;
+            text-align: center;
+        }
+        .flow-arrow {
+            font-size: 2rem;
+            color: #94a3b8; /* slate-400 */
+            margin: 0.5rem 0;
+        }
+    </style>
+</head>
+<body class="bg-slate-100 text-slate-800">
+<!-- START: NAVIGATION HEADER -->
+<header class="bg-white shadow-sm sticky top-0 z-50">
+    <nav class="container mx-auto px-6 py-4 flex justify-between items-center">
+        <!-- عنوان صفحه به صورت خودکار از تگ <title> خوانده می‌شود -->
+        <h1 id="page-title" class="text-xl font-bold text-slate-800"></h1>
+        <div>
+            <a href="index.html" class="bg-teal-100 text-teal-800 font-semibold px-4 py-2 rounded-full hover:bg-teal-200 transition-colors duration-300 flex items-center gap-2">
+                <span>↪</span>
+                <span>بازگشت به پورتال</span>
+            </a>
+        </div>
+    </nav>
+</header>
+<!-- END: NAVIGATION HEADER -->
+
+
+    <!-- Header -->
+    <header class="bg-white shadow-lg">
+        <div class="container mx-auto px-6 py-6 text-center">
+            <h1 class="text-3xl md:text-4xl font-extrabold text-teal-700">هفته سوم: استراتژی‌های داده‌محور با هوش مصنوعی</h1>
+            <p class="mt-3 text-lg text-slate-600 max-w-3xl mx-auto">این هفته، مهارت‌های کلیدی برای تبدیل شدن به یک استراتژیست دیجیتال را کسب می‌کنید: جذب مخاطب هدف با سئو و تبدیل داده به تصمیمات هوشمندانه.</p>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="container mx-auto px-6 py-12">
+
+        <!-- Tab Navigation -->
+        <div class="mb-10 flex justify-center border-b border-slate-300">
+            <button id="seo-tab-button" class="tab-button text-lg font-semibold px-6 py-3 -mb-px border-b-4">بخش اول: استراتژی سئو با قدرت AI</button>
+            <button id="analysis-tab-button" class="tab-button text-lg font-semibold px-6 py-3 border-b-4 border-transparent text-slate-500 hover:text-teal-600">بخش دوم: هنر داستان‌گویی با داده‌ها</button>
+        </div>
+
+        <!-- SEO Content -->
+        <div id="seo-content">
+            <section class="mb-12 text-center">
+                <h2 class="text-2xl font-bold mb-4">فراتر از کلمات کلیدی: درک عمیق کاربر با AI</h2>
+                <p class="text-slate-600 leading-relaxed max-w-4xl mx-auto">
+                    در گذشته، سئو به معنی تکرار کلمات کلیدی بود. امروز، سئو یعنی پاسخ به <strong class="text-teal-600">نیت کاربر (User Intent)</strong>. ابزارهای هوش مصنوعی مانند <strong class="text-teal-600">SurferSEO</strong> به ما کمک می‌کنند تا بفهمیم کاربر واقعاً به دنبال چه چیزی است و چگونه می‌توانیم جامع‌ترین و بهترین پاسخ را به او ارائه دهیم. این ابزارها، دستیار استراتژیست شما هستند، نه نویسنده شما.
+                </p>
+            </section>
+
+            <section class="mb-12">
+                <h2 class="text-2xl font-bold mb-8 text-center">گردش کار حرفه‌ای برای تولید محتوای رتبه‌بگیر</h2>
+
+                <!-- Step 1 -->
+                <div class="flex items-start mb-10">
+                    <div class="step-counter ml-6 flex-shrink-0">۱</div>
+                    <div>
+                        <h3 class="text-xl font-bold mb-2">کشف استراتژی محتوایی رقبا</h3>
+                        <p class="text-slate-600">کار را با وارد کردن کلمه کلیدی اصلی (مثلاً "آموزش سرمایه‌گذاری") در ابزار شروع کنید. هوش مصنوعی در چند ثانیه، ۱۰ تا ۲۰ صفحه برتر گوگل را تحلیل کرده و یک "نقشه راه" به شما می‌دهد. این نقشه شامل موارد زیر است:</p>
+                        <ul class="list-disc list-inside mt-3 space-y-2 text-slate-700">
+                            <li><strong>کلمات کلیدی مرتبط (LSI):</strong> لیستی از عباراتی که رقبای شما استفاده کرده‌اند (مانند "سرمایه‌گذاری در بورس"، "بهترین سهام برای خرید"، "ریسک سرمایه‌گذاری").</li>
+                            <li><strong>ساختار بهینه:</strong> تعداد بهینه کلمات، تیترها (H1, H2)، پاراگراف‌ها و تصاویر.</li>
+                            <li><strong>سوالات کاربران:</strong> لیستی از سوالاتی که کاربران در گوگل می‌پرسند و شما باید در محتوای خود به آنها پاسخ دهید.</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Step 2 -->
+                <div class="flex items-start mb-10">
+                    <div class="step-counter ml-6 flex-shrink-0">۲</div>
+                    <div>
+                        <h3 class="text-xl font-bold mb-2">نوشتن محتوا بر اساس نقشه راه</h3>
+                        <p class="text-slate-600">حالا با استفاده از این نقشه راه، شروع به نوشتن محتوای خود کنید. ابزارهای مدرن یک ویرایشگر متن دارند که به صورت زنده به شما بازخورد می‌دهد. با هر کلمه‌ای که می‌نویسید، یک "امتیاز محتوا" (Content Score) به شما نمایش داده می‌شود. این امتیاز نشان می‌دهد چقدر به نقشه راه پیشنهادی نزدیک شده‌اید.</p>
+                    </div>
+                </div>
+                
+                <!-- Step 3 -->
+                <div class="flex items-start mb-10">
+                    <div class="step-counter ml-6 flex-shrink-0">۳</div>
+                    <div>
+                        <h3 class="text-xl font-bold mb-2">بهینه‌سازی و افزایش امتیاز</h3>
+                        <p class="text-slate-600">پس از اتمام پیش‌نویس، فرآیند بهینه‌سازی آغاز می‌شود. ابزار به شما می‌گوید کدام کلمات کلیدی را کم یا زیاد استفاده کرده‌اید، کدام سوالات بی‌پاسخ مانده‌اند و آیا طول محتوای شما مناسب است یا خیر. هدف شما رساندن امتیاز محتوا به بالاترین حد ممکن (معمولاً بالاتر از رقبای اصلی) است.</p>
+                    </div>
+                </div>
+            </section>
+
+            <section class="mb-12 bg-white p-8 rounded-2xl shadow-xl">
+                <h2 class="text-2xl font-bold mb-6 text-center">مثال عملی: بهینه‌سازی مقاله "خواص چای سبز"</h2>
+                
+                <div class="text-center mb-8">
+                    <p class="font-bold text-lg">هدف: کسب رتبه برای کلمه کلیدی "خواص چای سبز"</p>
+                </div>
+
+                <div class="grid md:grid-cols-3 gap-4 text-center">
+                    <div class="diagram-box">
+                        <h4 class="font-bold mb-2">۱. تحلیل AI</h4>
+                        <p class="text-sm">ابزار SurferSEO صفحات برتر را تحلیل کرده و یک نقشه راه ارائه می‌دهد.</p>
+                    </div>
+                    <div class="flex items-center justify-center flow-arrow">➔</div>
+                     <div class="diagram-box">
+                        <h4 class="font-bold mb-2">۲. نوشتن پیش‌نویس</h4>
+                        <p class="text-sm">شما بر اساس نقشه راه، پیش‌نویس مقاله را می‌نویسید. امتیاز اولیه: <strong class="text-orange-500">۵۲/۱۰۰</strong></p>
+                    </div>
+                </div>
+                <div class="flex justify-center my-4">
+                     <div class="flow-arrow">👇</div>
+                </div>
+                 <div class="diagram-box max-w-3xl mx-auto p-6 bg-teal-50 border-teal-500 border-2">
+                    <h4 class="font-bold mb-3 text-teal-800">۳. فرآیند بهینه‌سازی زنده</h4>
+                    <p class="text-sm mb-4">ابزار به شما پیشنهاد می‌دهد:</p>
+                    <ul class="text-left text-sm space-y-2">
+                        <li><span class="text-green-600 font-bold">افزودن:</span> کلمه کلیدی <strong class="text-black">"لاغری با چای سبز"</strong> را ۳ بار تکرار کنید.</li>
+                        <li><span class="text-green-600 font-bold">افزودن:</span> یک بخش با تیتر H2 برای <strong class="text-black">"مضرات چای سبز"</strong> اضافه کنید.</li>
+                        <li><span class="text-orange-600 font-bold">کاهش:</span> کلمه <strong class="text-black">"نوشیدنی"</strong> بیش از حد تکرار شده است.</li>
+                        <li><span class="text-blue-600 font-bold">افزودن:</span> به سوال <strong class="text-black">"بهترین زمان مصرف چای سبز کی است؟"</strong> پاسخ دهید.</li>
+                    </ul>
+                     <p class="mt-4 font-bold">امتیاز نهایی پس از بهینه‌سازی: <strong class="text-green-600">۸۹/۱۰۰</strong></p>
+                </div>
+            </section>
+        </div>
+
+        <!-- Data Analysis Content -->
+        <div id="analysis-content" class="hidden">
+            <section class="mb-12 text-center">
+                <h2 class="text-2xl font-bold mb-4">هنر داستان‌گویی با داده‌ها (Data Storytelling)</h2>
+                <p class="text-slate-600 leading-relaxed max-w-4xl mx-auto">
+                    یک داشبورد خوب، مجموعه‌ای از نمودارها نیست؛ بلکه یک <strong class="text-teal-600">داستان</strong> است که به سوالات کلیدی کسب‌وکار پاسخ می‌دهد. ابزارهایی مانند <strong class="text-teal-600">Microsoft Power BI</strong> و <strong class="text-teal-600">Looker Studio</strong> به ما کمک می‌کنند تا این داستان را به صورت بصری و تعاملی روایت کنیم و مدیران را قادر سازیم تا با یک نگاه، نبض کسب‌وکار خود را در دست بگیرند.
+                </p>
+            </section>
+
+             <section class="mb-12">
+                <h2 class="text-2xl font-bold mb-8 text-center">گردش کار ساخت یک داشبورد مدیریتی مؤثر</h2>
+
+                <!-- Step 1 -->
+                <div class="flex items-start mb-10">
+                    <div class="step-counter ml-6 flex-shrink-0">۱</div>
+                    <div>
+                        <h3 class="text-xl font-bold mb-2">شروع با سوال، نه با داده!</h3>
+                        <p class="text-slate-600">مهم‌ترین مرحله، تعریف سوالات کلیدی کسب‌وکار است. قبل از باز کردن هر ابزاری، از مدیران بپرسید: "مهم‌ترین معیارهایی که می‌خواهید روزانه رصد کنید چیست؟". مثال:</p>
+                        <ul class="list-disc list-inside mt-3 space-y-2 text-slate-700">
+                            <li>کدام محصولات ما پرفروش‌ترین هستند؟</li>
+                            <li>کدام استان‌ها بیشترین سهم را در فروش ما دارند؟</li>
+                            <li>روند فروش ما در ۶ ماه گذشته چگونه بوده است؟</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Step 2 -->
+                <div class="flex items-start mb-10">
+                    <div class="step-counter ml-6 flex-shrink-0">۲</div>
+                    <div>
+                        <h3 class="text-xl font-bold mb-2">جمع‌آوری و پاکسازی داده‌ها</h3>
+                        <p class="text-slate-600">پس از مشخص شدن سوالات، داده‌های مورد نیاز را از منابع مختلف (اکسل، پایگاه داده و...) جمع‌آوری کنید. سپس مرحله حیاتی <strong class="text-teal-600">پاکسازی داده (Data Cleaning)</strong> آغاز می‌شود. این مرحله شامل کارهایی مانند حذف رکوردهای تکراری، پر کردن مقادیر خالی، و استانداردسازی داده‌ها (مثلاً تبدیل "تهران" و "استان تهران" به یک مقدار واحد) است.</p>
+                    </div>
+                </div>
+                
+                <!-- Step 3 -->
+                <div class="flex items-start mb-10">
+                    <div class="step-counter ml-6 flex-shrink-0">۳</div>
+                    <div>
+                        <h3 class="text-xl font-bold mb-2">انتخاب نمودار مناسب برای هر سوال</h3>
+                        <p class="text-slate-600">هر سوالی، با نمودار خاصی بهتر پاسخ داده می‌شود. با کشیدن و رها کردن داده‌ها در ابزار، نمودارهای خود را بسازید:</p>
+                        <ul class="list-disc list-inside mt-3 space-y-2 text-slate-700">
+                            <li>برای مقایسه (پرفروش‌ترین محصولات): <strong class="text-blue-600">نمودار میله‌ای (Bar Chart)</strong></li>
+                            <li>برای نمایش روند در طول زمان (فروش ماهانه): <strong class="text-blue-600">نمودار خطی (Line Chart)</strong></li>
+                            <li>برای نمایش سهم از کل (سهم هر محصول از کل فروش): <strong class="text-blue-600">نمودار دایره‌ای (Pie Chart) یا Treemap</strong></li>
+                            <li>برای نمایش توزیع جغرافیایی (فروش در استان‌ها): <strong class="text-blue-600">نقشه (Map)</strong></li>
+                        </ul>
+                    </div>
+                </div>
+
+                 <!-- Step 4 -->
+                 <div class="flex items-start mb-10">
+                    <div class="step-counter ml-6 flex-shrink-0">۴</div>
+                    <div>
+                        <h3 class="text-xl font-bold mb-2">چیدمان داشبورد و روایت داستان</h3>
+                        <p class="text-slate-600">در نهایت، نمودارها را در یک صفحه بچینید. مهم‌ترین معیارها (KPIs) را در بالا و با فونت بزرگ نمایش دهید. نمودارها را به گونه‌ای کنار هم قرار دهید که یک داستان منطقی را روایت کنند. با افزودن فیلترهای تعاملی (مثلاً فیلتر بر اساس تاریخ)، به کاربر اجازه دهید تا خودش در داده‌ها کنکاش کرده و به سوالاتش برسد.</p>
+                    </div>
+                </div>
+            </section>
+
+            <section class="mb-12 bg-white p-8 rounded-2xl shadow-xl">
+                <h2 class="text-2xl font-bold mb-6 text-center">مثال عملی: داشبورد تحلیل فروش فروشگاه آنلاین</h2>
+                <div class="diagram-box">
+                    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 mb-6">
+                        <div class="bg-teal-100 p-4 rounded-lg">
+                            <p class="text-sm text-teal-800">کل فروش</p>
+                            <p class="text-2xl font-bold text-teal-900">۱.۲ میلیارد تومان</p>
+                        </div>
+                        <div class="bg-blue-100 p-4 rounded-lg">
+                             <p class="text-sm text-blue-800">تعداد سفارشات</p>
+                            <p class="text-2xl font-bold text-blue-900">۳,۴۵۰</p>
+                        </div>
+                        <div class="bg-indigo-100 p-4 rounded-lg">
+                             <p class="text-sm text-indigo-800">میانگین هر سفارش</p>
+                            <p class="text-2xl font-bold text-indigo-900">۳۴۷,۰۰۰ تومان</p>
+                        </div>
+                         <div class="bg-rose-100 p-4 rounded-lg">
+                             <p class="text-sm text-rose-800">نرخ بازگشت مشتری</p>
+                            <p class="text-2xl font-bold text-rose-900">۲۵٪</p>
+                        </div>
+                    </div>
+                     <div class="grid grid-cols-1 lg:grid-cols-2 gap-6">
+                        <div>
+                             <h4 class="font-bold mb-2">روند فروش ماهانه</h4>
+                             <img src="https://placehold.co/600x300/E2E8F0/475569?text=Line+Chart" alt="Line Chart Placeholder" class="rounded-lg w-full">
+                        </div>
+                        <div>
+                             <h4 class="font-bold mb-2">سهم فروش بر اساس محصول</h4>
+                            <img src="https://placehold.co/600x300/E2E8F0/475569?text=Bar+Chart" alt="Bar Chart Placeholder" class="rounded-lg w-full">
+                        </div>
+                     </div>
+                </div>
+            </section>
+        </div>
+
+        <!-- Weekly Assignment -->
+        <section class="my-16 bg-teal-50 border-r-4 border-teal-500 p-8 rounded-lg">
+            <h2 class="text-2xl font-bold mb-4">🚀 تکلیف این هفته</h2>
+            <p class="text-slate-700 mb-4">با دانش عمیق‌تری که کسب کرده‌اید، آماده یک چالش واقعی‌تر هستید:</p>
+            <ol class="list-decimal list-inside text-slate-700 space-y-3">
+                <li><strong>استراتژی سئو:</strong> برای یک کسب‌وکار واقعی یا فرضی (مثلاً یک کلینیک زیبایی)، یک کلمه کلیدی اصلی انتخاب کنید. با استفاده از نسخه رایگان SurferSEO یا ابزار مشابه، یک نقشه راه محتوایی (شامل کلمات کلیدی مرتبط و ساختار پیشنهادی) برای آن تهیه کنید.</li>
+                <li><strong>داستان‌سرایی با داده:</strong> یک مجموعه داده عمومی (Dataset) از سایت Kaggle در مورد موضوعی که به آن علاقه دارید (مثلاً فیلم‌های سینمایی یا تیم‌های فوتبال) دانلود کنید. قبل از هر کاری، ۳ سوال کلیدی که می‌خواهید به آن پاسخ دهید را بنویسید. سپس با Power BI یا Looker Studio یک داشبورد تک صفحه‌ای بسازید که به این ۳ سوال پاسخ دهد.</li>
+            </ol>
+        </section>
+
+    </main>
+    
+    <footer class="bg-slate-800 text-white mt-16">
+        <div class="container mx-auto px-6 py-8 text-center">
+            <p>ادامه مسیر در هفته چهارم: ساخت پورتفولیو و جذب پروژه</p>
+            <p class="text-sm text-slate-400 mt-2">© ۱۴۰۳ - دوره جامع هوش مصنوعی کاربردی</p>
+        </div>
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const seoTabButton = document.getElementById('seo-tab-button');
+            const analysisTabButton = document.getElementById('analysis-tab-button');
+            const seoContent = document.getElementById('seo-content');
+            const analysisContent = document.getElementById('analysis-content');
+
+            function showSeoContent() {
+                seoContent.classList.remove('hidden');
+                analysisContent.classList.add('hidden');
+                seoTabButton.classList.add('active');
+                analysisTabButton.classList.remove('active', 'text-teal-600');
+                analysisTabButton.classList.add('border-transparent', 'text-slate-500');
+            }
+
+            function showAnalysisContent() {
+                analysisContent.classList.remove('hidden');
+                seoContent.classList.add('hidden');
+                analysisTabButton.classList.add('active');
+                seoTabButton.classList.remove('active');
+                seoTabButton.classList.add('border-transparent', 'text-slate-500');
+            }
+
+            seoTabButton.addEventListener('click', showSeoContent);
+            analysisTabButton.addEventListener('click', showAnalysisContent);
+
+            // Initially show seo content
+            showSeoContent();
+        });
+    </script>
+
+    <!-- این اسکریپت کوچک را به انتهای تگ <body> اضافه کنید -->
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        const pageTitleElement = document.getElementById('page-title');
+        if (pageTitleElement) {
+            pageTitleElement.textContent = document.title;
+        }
+    });
+</script>
+</body>
+</html>

@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>جعبه ابزار متخصص هوش مصنوعی</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@400;500;700;800&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Vazirmatn', sans-serif;
+            background-color: #f8fafc; /* slate-50 */
+        }
+        .tool-card {
+            background-color: white;
+            border: 1px solid #e2e8f0; /* slate-200 */
+            border-radius: 0.75rem;
+            padding: 1.5rem;
+            transition: all 0.3s ease-in-out;
+            box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.05), 0 2px 4px -2px rgb(0 0 0 / 0.05);
+            display: flex;
+            flex-direction: column;
+        }
+        .tool-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
+        }
+        .pro-tip {
+            background-color: #f0fdfa; /* teal-50 */
+            border-right: 4px solid #14b8a6; /* teal-500 */
+            padding: 1rem;
+            border-radius: 0.5rem;
+            margin-top: auto; /* Pushes the tip to the bottom */
+        }
+        .week-title {
+            background: linear-gradient(to right, #14b8a6, #0d9488);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        .card-content {
+            flex-grow: 1;
+        }
+    </style>
+</head>
+<body class="text-slate-700">
+<!-- START: NAVIGATION HEADER -->
+<header class="bg-white shadow-sm sticky top-0 z-50">
+    <nav class="container mx-auto px-6 py-4 flex justify-between items-center">
+        <!-- عنوان صفحه به صورت خودکار از تگ <title> خوانده می‌شود -->
+        <h1 id="page-title" class="text-xl font-bold text-slate-800"></h1>
+        <div>
+            <a href="index.html" class="bg-teal-100 text-teal-800 font-semibold px-4 py-2 rounded-full hover:bg-teal-200 transition-colors duration-300 flex items-center gap-2">
+                <span>↪</span>
+                <span>بازگشت به پورتال</span>
+            </a>
+        </div>
+    </nav>
+</header>
+<!-- END: NAVIGATION HEADER -->
+
+    <!-- Header -->
+    <header class="bg-white shadow-md sticky top-0 z-50">
+        <div class="container mx-auto px-6 py-5 text-center">
+            <h1 class="text-3xl md:text-4xl font-extrabold text-slate-800">جعبه ابزار متخصص هوش مصنوعی</h1>
+            <p class="mt-3 text-lg text-slate-500 max-w-2xl mx-auto">راهنمای جامع شما برای بهترین ابزارها، منابع و نکات حرفه‌ای در هر مرحله از مسیر یادگیری.</p>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="container mx-auto px-6 py-12">
+
+        <!-- Week 1 -->
+        <section class="mb-16">
+            <h2 class="text-2xl md:text-3xl font-bold mb-8 text-center week-title">هفته اول: تولید محتوای هوشمند</h2>
+            <div class="grid md:grid-cols-1 lg:grid-cols-2 gap-8">
+                <!-- Text Tools -->
+                <div class="tool-card">
+                    <div class="card-content">
+                        <h3 class="font-bold text-xl mb-4 flex items-center"><span class="text-3xl ml-3">✍️</span> ابزارهای تولید متن</h3>
+                        <p class="text-sm mb-4">این ابزارها، دستیار نویسندگی شما هستند. از آن‌ها برای ایده‌پردازی، نوشتن پیش‌نویس، و ویرایش استفاده کنید.</p>
+                        <ul class="space-y-3">
+                            <li><strong class="text-teal-600">ChatGPT Plus (پولی):</strong> بهترین انتخاب برای کارهای حرفه‌ای. دسترسی به مدل GPT-4 برای بالاترین کیفیت و قابلیت‌های جانبی بی‌نظیر.</li>
+                            <li><strong class="text-teal-600">Gemini (رایگان/پولی):</strong> رقیب قدرتمند گوگل با قابلیت‌های منحصربه‌فرد در تحلیل فایل و اتصال به سرویس‌های گوگل. نسخه رایگان آن فوق‌العاده است.</li>
+                            <li><strong class="text-blue-600">Perplexity AI (رایگان):</strong> موتور جستجوی هوشمند. ایده‌آل برای تحقیق و یافتن منابع معتبر برای محتوای خود.</li>
+                        </ul>
+                        <hr class="my-4">
+                        <h4 class="font-semibold text-slate-700 mb-3">سایر گزینه‌های رایگان:</h4>
+                        <ul class="space-y-2 text-sm text-slate-500">
+                            <li><strong>Claude:</strong> دارای توانایی بالایی در خلاصه‌سازی و تحلیل متون طولانی.</li>
+                            <li><strong>Poe by Quora:</strong> دسترسی به چندین مدل مختلف هوش مصنوعی (از جمله Claude و Llama) در یک پلتفرم.</li>
+                            <li><strong>Writesonic:</strong> ابزار کمکی برای نوشتن محتوای بازاریابی با یک پلن رایگان کارآمد.</li>
+                            <li><strong>Hugging Face Chat:</strong> یک پلتفرم متن‌باز برای دسترسی به مدل‌های مختلف.</li>
+                            <li><strong>You.com:</strong> موتور جستجویی که یک دستیار هوش مصنوعی برای پاسخ به سوالات دارد.</li>
+                        </ul>
+                    </div>
+                    <div class="pro-tip">
+                        <p class="font-bold">⭐ نکته حرفه‌ای:</p>
+                        <p class="text-sm">به جای پرامپت‌های تک‌خطی، از "مکالمه" با هوش مصنوعی استفاده کنید. ابتدا ساختار کلی را بخواهید، سپس هر بخش را به صورت جداگانه توسعه دهید. این کار کنترل شما بر خروجی را به شدت افزایش می‌دهد.</p>
+                    </div>
+                </div>
+                <!-- Image Tools -->
+                <div class="tool-card">
+                    <div class="card-content">
+                        <h3 class="font-bold text-xl mb-4 flex items-center"><span class="text-3xl ml-3">🎨</span> ابزارهای تولید تصویر</h3>
+                        <p class="text-sm mb-4">ایده‌های خود را به تصاویر خیره‌کننده تبدیل کنید. این ابزارها، آتلیه دیجیتال شما هستند.</p>
+                         <ul class="space-y-3">
+                            <li><strong class="text-teal-600">Midjourney (پولی):</strong> استاندارد طلایی برای تولید تصاویر هنری و خلاقانه. اگر کیفیت بصری اولویت اول شماست، این بهترین گزینه است.</li>
+                            <li><strong class="text-teal-600">Leonardo.Ai (فریمیوم):</strong> بهترین جایگزین Midjourney با حجم قابل توجهی اعتبار روزانه رایگان. انعطاف‌پذیری و کنترل بالایی ارائه می‌دهد.</li>
+                            <li><strong class="text-blue-600">Microsoft Copilot (رایگان):</strong> راهی آسان و کاملاً رایگان برای دسترسی به مدل قدرتمند DALL-E 3 و تولید تصاویر باکیفیت.</li>
+                        </ul>
+                        <hr class="my-4">
+                        <h4 class="font-semibold text-slate-700 mb-3">سایر گزینه‌های رایگان:</h4>
+                        <ul class="space-y-2 text-sm text-slate-500">
+                            <li><strong>Playground AI:</strong> گزینه‌ای عالی با امکانات ویرایشی زیاد و پلن رایگان سخاوتمندانه.</li>
+                            <li><strong>Canva AI Image Generator:</strong> یک ابزار تولید تصویر ساده و کاربردی، مستقیماً در داخل پلتفرم Canva.</li>
+                            <li><strong>DreamStudio:</strong> پلتفرم رسمی شرکت Stability AI برای استفاده از مدل Stable Diffusion.</li>
+                            <li><strong>NightCafe Creator:</strong> یکی از ابزارهای قدیمی‌تر با جامعه کاربری فعال و سبک‌های هنری متنوع.</li>
+                            <li><strong>StarryAI:</strong> ابزاری مناسب برای موبایل که تولید تصاویر هنری را ساده می‌کند.</li>
+                        </ul>
+                    </div>
+                     <div class="pro-tip">
+                        <p class="font-bold">⭐ نکته حرفه‌ای:</p>
+                        <p class="text-sm">یک "کتابخانه پرامپت" برای خودتان بسازید. پرامپت‌هایی که نتایج خوبی می‌دهند را همراه با تصویر خروجی در یک فایل Notion یا Word ذخیره کنید تا در آینده از آن‌ها ایده بگیرید.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Week 2 -->
+        <section class="mb-16">
+            <h2 class="text-2xl md:text-3xl font-bold mb-8 text-center week-title">هفته دوم: اتوماسیون و چت‌بات</h2>
+             <div class="grid md:grid-cols-1 lg:grid-cols-2 gap-8">
+                <!-- Chatbot Tools -->
+                <div class="tool-card">
+                    <div class="card-content">
+                        <h3 class="font-bold text-xl mb-4 flex items-center"><span class="text-3xl ml-3">🤖</span> ابزارهای ساخت چت‌بات</h3>
+                        <p class="text-sm mb-4">دستیارهای مجازی ۲۴ ساعته بسازید که فروش را افزایش داده و به مشتریان شما خدمت‌رسانی می‌کنند.</p>
+                        <ul class="space-y-3">
+                            <li><strong class="text-teal-600">ManyChat (فریمیوم):</strong> انتخاب اول برای اینستاگرام و فیسبوک. نسخه رایگان آن برای شروع و یادگیری کاملاً مناسب است.</li>
+                            <li><strong class="text-blue-600">Tars / Botsify (فریمیوم):</strong> گزینه‌های عالی برای ساخت چت‌بات‌های پیشرفته‌تر روی وب‌سایت‌ها جهت جمع‌آوری لید و پشتیبانی.</li>
+                        </ul>
+                        <hr class="my-4">
+                        <h4 class="font-semibold text-slate-700 mb-3">سایر گزینه‌های رایگان:</h4>
+                        <ul class="space-y-2 text-sm text-slate-500">
+                            <li><strong>Tidio:</strong> یک پلتفرم چت زنده که ابزار ساخت چت‌بات را نیز در پلن رایگان خود ارائه می‌دهد.</li>
+                            <li><strong>FlowXO:</strong> ابزاری انعطاف‌پذیر برای ساخت ربات برای پلتفرم‌های مختلف با پلن رایگان مناسب.</li>
+                            <li><strong>HubSpot Chatbot Builder:</strong> بخشی از CRM رایگان HubSpot، برای جمع‌آوری اطلاعات مشتریان عالی است.</li>
+                            <li><strong>Botpress:</strong> یک پلتفرم متن‌باز قدرتمند که می‌توانید آن را به رایگان روی سرور خود میزبانی کنید.</li>
+                             <li><strong>Drift:</strong> یکی از بهترین ابزارهای بازاریابی مکالمه‌ای که پلن رایگان محدودی برای کسب‌وکارهای کوچک دارد.</li>
+                        </ul>
+                    </div>
+                    <div class="pro-tip">
+                        <p class="font-bold">⭐ نکته حرفه‌ای:</p>
+                        <p class="text-sm">برای چت‌بات خود "شخصیت" تعریف کنید. آیا قرار است رسمی باشد یا دوستانه؟ استفاده از لحن یکسان و مناسب، تجربه کاربری را به شدت بهبود می‌بخشد.</p>
+                    </div>
+                </div>
+                <!-- Automation Tools -->
+                <div class="tool-card">
+                    <div class="card-content">
+                        <h3 class="font-bold text-xl mb-4 flex items-center"><span class="text-3xl ml-3">⚙️</span> ابزارهای اتوماسیون</h3>
+                        <p class="text-sm mb-4">کارهای تکراری و خسته‌کننده را به ربات‌ها بسپارید و زمان خود را صرف کارهای خلاقانه کنید.</p>
+                         <ul class="space-y-3">
+                            <li><strong class="text-teal-600">Zapier (فریمیوم):</strong> اقیانوسی از امکانات. تقریباً هر اپلیکیشنی که فکرش را بکنید به هم متصل می‌کند. یک مهارت ضروری برای هر دیجیتال مارکتر.</li>
+                            <li><strong class="text-blue-600">Make (فریمیوم):</strong> رقیب اصلی Zapier با رابط کاربری بصری‌تر و سخاوتمندی بیشتر در پلن رایگان. برای ساخت گردش‌کارهای پیچیده عالی است.</li>
+                        </ul>
+                        <hr class="my-4">
+                        <h4 class="font-semibold text-slate-700 mb-3">سایر گزینه‌های رایگان:</h4>
+                        <ul class="space-y-2 text-sm text-slate-500">
+                            <li><strong>IFTTT:</strong> یکی از قدیمی‌ترین و ساده‌ترین ابزارها، مناسب برای اتوماسیون‌های شخصی و دستگاه‌های هوشمند.</li>
+                            <li><strong>n8n.io:</strong> یک ابزار متن‌باز بسیار قدرتمند که می‌توانید به رایگان روی سرور خود نصب کنید.</li>
+                             <li><strong>Microsoft Power Automate:</strong> ابزار اتوماسیون مایکروسافت با یکپارچگی عالی با ویندوز و آفیس. پلن رایگان دارد.</li>
+                             <li><strong>Pabbly Connect:</strong> جایگزینی برای Zapier که اغلب در پلن‌های رایگان و پولی خود سخاوتمندانه‌تر عمل می‌کند.</li>
+                             <li><strong>Albato:</strong> پلتفرم دیگری برای اتوماسیون که بر روی یکپارچه‌سازی برای کسب‌وکارهای SaaS تمرکز دارد.</li>
+                        </ul>
+                    </div>
+                     <div class="pro-tip">
+                        <p class="font-bold">⭐ نکته حرفه‌ای:</p>
+                        <p class="text-sm">از کارهای کوچک شروع کنید. یک فرآیند تکراری در زندگی شخصی خود (مانند ذخیره کردن یک نوع ایمیل خاص) را پیدا کرده و آن را خودکار کنید تا با منطق این ابزارها آشنا شوید.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+         <!-- Week 3 -->
+        <section class="mb-16">
+            <h2 class="text-2xl md:text-3xl font-bold mb-8 text-center week-title">هفته سوم: بازاریابی و تحلیل داده</h2>
+             <div class="grid md:grid-cols-1 lg:grid-cols-2 gap-8">
+                <!-- SEO Tools -->
+                <div class="tool-card">
+                    <div class="card-content">
+                        <h3 class="font-bold text-xl mb-4 flex items-center"><span class="text-3xl ml-3">📈</span> ابزارهای سئو</h3>
+                        <p class="text-sm mb-4">محتوای خود را به گونه‌ای بهینه کنید که گوگل عاشق آن شود و شما را به صفحه اول نتایج برساند.</p>
+                        <ul class="space-y-3">
+                            <li><strong class="text-teal-600">SurferSEO / Frase.io (پولی):</strong> دستیار استراتژیست محتوای شما. با تحلیل رقبا، نقشه راه دقیقی برای تولید محتوای رتبه‌بگیر به شما می‌دهند.</li>
+                        </ul>
+                        <hr class="my-4">
+                        <h4 class="font-semibold text-slate-700 mb-3">سایر گزینه‌های رایگان:</h4>
+                        <ul class="space-y-2 text-sm text-slate-500">
+                            <li><strong>Google Search Console:</strong> ضروری‌ترین ابزار رایگان سئو که مستقیماً از طرف گوگل ارائه می‌شود.</li>
+                            <li><strong>Ahrefs Webmaster Tools:</strong> نسخه رایگان ابزار قدرتمند Ahrefs برای تحلیل سایت خودتان.</li>
+                            <li><strong>AnswerThePublic:</strong> برای پیدا کردن سوالاتی که کاربران در مورد کلمه کلیدی شما می‌پرسند عالی است.</li>
+                            <li><strong>Ubersuggest:</strong> ابزار نیل پاتل که تحلیل کلمات کلیدی و سایت را در نسخه رایگان ارائه می‌دهد.</li>
+                             <li><strong>AlsoAsked:</strong> به شما کمک می‌کند تا نقشه بصری از سوالات مرتبط با کلمه کلیدی خود را ببینید.</li>
+                        </ul>
+                    </div>
+                    <div class="pro-tip">
+                        <p class="font-bold">⭐ نکته حرفه‌ای:</p>
+                        <p class="text-sm">به "امتیاز محتوا" به عنوان یک راهنما نگاه کنید، نه یک قانون سخت. هدف اصلی، پاسخ جامع به نیاز کاربر است. گاهی یک محتوای با امتیاز پایین‌تر اما با کیفیت بالاتر، رتبه بهتری می‌گیرد.</p>
+                    </div>
+                </div>
+                <!-- Data Tools -->
+                <div class="tool-card">
+                    <div class="card-content">
+                        <h3 class="font-bold text-xl mb-4 flex items-center"><span class="text-3xl ml-3">📊</span> ابزارهای تحلیل داده</h3>
+                        <p class="text-sm mb-4">داده‌های خام و گیج‌کننده را به داستان‌های بصری و قابل فهم برای مدیران تبدیل کنید.</p>
+                         <ul class="space-y-3">
+                            <li><strong class="text-blue-600">Microsoft Power BI (رایگان):</strong> ابزار قدرتمند مایکروسافت که نسخه دسکتاپ آن کاملاً رایگان است. یک مهارت بسیار پرتقاضا در بازار کار.</li>
+                            <li><strong class="text-blue-600">Looker Studio (رایگان):</strong> انتخاب عالی برای کسانی که با اکوسیستم گوگل کار می‌کنند. اتصال آن به Google Sheets و Analytics بی‌نظیر است.</li>
+                        </ul>
+                        <hr class="my-4">
+                        <h4 class="font-semibold text-slate-700 mb-3">سایر گزینه‌های رایگان:</h4>
+                        <ul class="space-y-2 text-sm text-slate-500">
+                             <li><strong>Google Colab:</strong> برای اجرای کدهای پایتون و کار با کتابخانه‌های تحلیل داده مانند Pandas در فضای ابری.</li>
+                            <li><strong>Kaggle:</strong> پلتفرمی برای دانشمندان داده با هزاران مجموعه داده عمومی و نوت‌بوک‌های رایگان.</li>
+                            <li><strong>Orange Data Mining:</strong> یک ابزار بصری و متن‌باز برای تحلیل داده بدون نیاز به کدنویسی.</li>
+                            <li><strong>KNIME:</strong> پلتفرم متن‌باز دیگری برای ساخت گردش‌کارهای تحلیل داده.</li>
+                            <li><strong>Datawrapper:</strong> برای ساخت سریع نمودارها و نقشه‌های زیبا و تعاملی جهت استفاده در مقالات و گزارش‌ها.</li>
+                        </ul>
+                    </div>
+                     <div class="pro-tip">
+                        <p class="font-bold">⭐ نکته حرفه‌ای:</p>
+                        <p class="text-sm">پیش از ساخت داشبورد، سوالات کلیدی کسب‌وکار را روی کاغذ بنویسید. داشبورد شما باید به این سوالات پاسخ دهد. از نمایش نمودارهای بی‌هدف و شلوغ پرهیز کنید.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Payment Section -->
+        <section class="mb-16">
+            <div class="bg-white p-8 rounded-lg shadow-lg border-t-4 border-teal-500">
+                <h2 class="text-2xl font-bold text-center mb-6">چگونه به سرویس‌های پولی دسترسی پیدا کنیم؟</h2>
+                <p class="text-center text-slate-600 max-w-2xl mx-auto mb-6">برای استفاده از ابزارهای حرفه‌ای، نیاز به پرداخت ارزی دارید. این کار از ایران ساده‌تر از چیزی است که فکر می‌کنید:</p>
+                <div class="grid md:grid-cols-2 gap-6 text-center">
+                    <div class="bg-slate-50 p-6 rounded-lg">
+                        <h3 class="font-bold mb-2">۱. سایت‌های واسطه پرداخت</h3>
+                        <p class="text-sm">ده‌ها وب‌سایت معتبر ایرانی وجود دارند که در ازای دریافت ریال، خرید اشتراک یا پرداخت‌های ارزی شما را انجام می‌ده دهند. با جستجوی "خرید اشتراک ChatGPT" در گوگل، به راحتی آن‌ها را پیدا می‌کنید. (پیش از خرید، از اعتبار سایت مطمئن شوید)</p>
+                    </div>
+                    <div class="bg-slate-50 p-6 rounded-lg">
+                        <h3 class="font-bold mb-2">۲. کارت‌های اعتباری مجازی (VCC)</h3>
+                        <p class="text-sm">برخی از همین وب‌سایت‌ها، کارت‌های اعتباری مجازی یک‌بار مصرف یا قابل شارژ با مبلغ دلخواه به شما می‌فروشند که می‌توانید مستقیماً از آن‌ها برای خرید در سایت‌های خارجی استفاده کنید.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-slate-800 text-white mt-16">
+        <div class="container mx-auto px-6 py-10 text-center">
+            <h3 class="text-xl font-bold">دوره جامع هوش مصنوعی کاربردی</h3>
+            <p class="text-slate-400 mt-4">تهیه و تدوین دوره:</p>
+            <p class="text-2xl font-extrabold text-teal-400 mt-2">ا.ق.آبکناری</p>
+            <p class="text-lg text-slate-300 mt-1 tracking-wider">@iDoDatofficial</p>
+        </div>
+    </footer>
+    <!-- این اسکریپت کوچک را به انتهای تگ <body> اضافه کنید -->
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        const pageTitleElement = document.getElementById('page-title');
+        if (pageTitleElement) {
+            pageTitleElement.textContent = document.title;
+        }
+    });
+</script>
+</body>
+</html>
